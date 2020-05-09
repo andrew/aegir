@@ -108,10 +108,8 @@ const base = (env, argv) => {
     },
     plugins: [
       new webpack.DefinePlugin({
-        'process.env': JSON.stringify({
-          DEBUG: process.env.DEBUG,
-          NODE_ENV: process.env.NODE_ENV
-        })
+        'process.env.DEBUG': JSON.stringify(process.env.DEBUG),
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
       })
     ],
     target: 'web',
